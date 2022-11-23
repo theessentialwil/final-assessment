@@ -1,0 +1,33 @@
+1. <npm init> within project folder
+
+2. create app.js or main.js as specified in 1 above
+
+3. Test app.js
+  Add the line <console['log']('hello folks. Node js says hi.')>
+  open terminal and type  <node app.js> 
+
+4. Within the package.json file, add the line for “start” under 
+  scripts. Make sure not to include a comma , at the end or you will see an error message.
+
+5. On the command line, try running <npm start> to start our file
+
+6. Install Express
+  $ npm i express
+
+7. Tell web app - app.js to use express by importing it into the app.js file
+    const express = require('express');
+    const app = express();
+
+8. Set up simple server with
+  app.listen(3000, () => console['log']('Elders are listening on port 3000'));
+
+9. Go to http://localhost:3000 in your browser
+    Notice that the web page displays “Cannot GET /” server is running but we 
+    haven’t given it any routing instructions. 
+
+10. Update app.js file to set up a homepage
+      app.get('/', (req, res) => { // new
+        res.send('Welcome home. This is Cohort 12, mbu!');
+      });
+
+11. Restart server and check browser again
